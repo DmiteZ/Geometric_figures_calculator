@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figuras geométricas</title>
+  <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+  <header>
+    <h1>FIGURAS GEOMETRICAS</h1>
+    <P class="text-header">Página para poder calcular figuras geometricas</P>
+  </header>
+
+  <section>
+    <form action="">
+      <h2>Calcula el área y perímetro de un cuadrado</h2>
+      <label for="inputCuadrado">Lado de tu cuadrado</label>
+      <input type="text" id="inputCuadrado"
+        onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;">
+      <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perimetro</button>
+      <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+      <p id="resultadoPerimetroCuadrado">
+        El perímetro de tu figura es:
+      </p>
+      <p id="resultadoAreaCuadrado">
+        El área de tu figura es:
+      </p>
+      <button type="button"
+        onclick="clean(resultadoPerimetroCuadrado,resultadoAreaCuadrado,inputCuadrado)">Cleaner</button>
+    </form>
+
+    <form action="">
+      <h2>Calcula el área y perímetro de un triángulo isósceles</h2>
+      <label for="inputLado1Triangulo">Primer lado de tu triangulo</label>
+      <input type="text" id="inputLado1Triangulo"
+        onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;">
+
+      <label for="inputLado2Triangulo">Segundo lado de tu triangulo</label>
+      <input type="text" id="inputLado2Triangulo"
+        onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;">
+
+      <label for="inputBaseTriangulo">Base de tu triangulo</label>
+      <input type="text" id="inputBaseTriangulo"
+        onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;">
+
+      <button type="button" onclick="calcularAlturaTriangulo()">Calcular la altura</button>
+      <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
+      <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+      <p id="resultadoAlturaTriangulo">
+        La altura de tu triángulo es:
+      </p>
+      <p id="resultadoPerimetroTriangulo">
+        El perimetro de tu figura es:
+      </p>
+      <p id="resultadoAreaTriangulo">
+        El área de tu figura es:
+      </p>
+      <button type="button"
+        onclick="cleanTriangulo(resultadoPerimetroTriangulo,resultadoAreaTriangulo,inputLado1Triangulo,inputLado2Triangulo,inputBaseTriangulo,resultadoAlturaTriangulo)">Clean</button>
+    </form>
+
+    <form action="">
+      <h2>Calcula el área y la circunferencia de un círculo</h2>
+      <label for="inputRadioCirculo">Escribe cuanto mide el radio de tu circulo</label>
+      <input type="text" id="inputRadioCirculo"
+        onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;">
+
+      <button type="button" onclick="calcularDiametroCirculo()">Calcular el diametro</button>
+
+      <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
+
+      <button type="button" onclick="calcularAreaCirculo()">Calcular el área</button>
+      <p id="resultadoDiametroCirculo">
+        El diametro de tu circulo es:
+      </p>
+      <p id="resultadoPerimetroCirculo">
+        El perimetro de tu figura es:
+      </p>
+      <p id="resultadoAreaCirculo">
+        El área de tu figura es:
+      </p>
+      <button type="button"
+        onclick="cleanCirculo(resultadoDiametroCirculo, resultadoPerimetroCirculo, resultadoAreaCirculo,inputRadioCirculo)">Clean</button>
+    </form>
+  </section>
+  <script src=" ./main.js"></script>
+</body>
+
+</html>
